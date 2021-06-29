@@ -16,8 +16,8 @@ router.get('/', async(req, res) => {
 router.get('/dashboard', async(req, res) => {
     try {
         if (req.session.user && req.cookies.user_sid) {
-            console.log(req.session.user[0]._id);
-            const user = await User.find({ _id: req.session.user[0]._id }).populate("posts").lean();
+            console.log(req.session.user._id);
+            const user = await User.find({ _id: req.session.user._id }).populate("posts").lean();
             console.log(user);
             const posts = user[0].posts;
             res.render('personal-posts', { posts, layout: 'dashboard' });
