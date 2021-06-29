@@ -20,7 +20,7 @@ router.get('/dashboard', async(req, res) => {
             const user = await User.find({ _id: req.session.user._id }).populate("posts").lean();
             console.log(user);
             const posts = user[0].posts;
-            res.render('personal-posts', { posts, layout: 'dashboard' });
+            res.render('personal-posts', { posts, layout: 'Dashboard' });
         } else {
             res.redirect('/login');
         }
