@@ -1,0 +1,24 @@
+
+  {{#each posts as |post|}}
+<div class="profile w-full px-4 shadow border-3 border-gray-200">
+    <div class="flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-full">
+        <div class="px-4 py-10 flex-auto">
+            <div class=""card border w-96 hover:shadow-none relative flex flex-col shadow-lg m-5">
+<img class="w-28 mb-5 h-28 p-1 bg-white rounded-full" src="https://api-private.atlassian.com/users/8f525203adb5093c5954b43a5b6420c2/avatar" alt="" />
+
+            </div>
+             <input type="hidden" name="post-id" value="{{post._id}}" />
+            <a href="/post/{{post._id}}"><h6 class="text-xl font-semibold">{{post.title}}   <span class="text-gray-600 ml-3"> Posted by  {{post.createdBy.username}}  on  {{format_Date post.dateCreated}}</span></h6></a>
+            <p class="mt-2 mb-4 text-gray-600">
+                {{post.body}} </p>
+        </div>
+        </div>
+        </div>
+     {{/each}}  
+
+
+
+
+
+
+    

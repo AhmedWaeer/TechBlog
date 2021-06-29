@@ -1,0 +1,19 @@
+
+{{#each posts as |post|}}
+<div class="profile w-full px-4 shadow border-3 border-gray-200">
+    <div class="flex flex-col min-w-0 break-words bg-white w-full mb-8 rounded-full">
+        <a div class="flex flex-row justify-between bg-white w-full mb-8 shadow-lg rounded-lg p-5" href="/dashboard/edit/{{post._id}}">
+            <span class="text-xl font-semibold">{{post.title}}</span>
+            <span>{{format_Date post.dateCreated}}</span>
+        </a>
+
+
+        </div>
+        </div>
+    
+          {{/each}}
+
+
+
+
+
