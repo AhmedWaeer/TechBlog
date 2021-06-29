@@ -8,7 +8,7 @@ router.get('/edit/:id', async(req, res) => {
         if (req.session.loggedIn && req.session.user) {
             const requiredPost = await Post.find({ _id: req.params.id }).lean();
             const post = requiredPost[0];
-            res.render('edit-post', { post, layout: 'dashboard' });
+            res.render('edit-post', { post, layout: 'Dashboard' });
         }
     } catch (err) {
         res.status(500).json(err);
