@@ -18,7 +18,7 @@ router.get('/edit/:id', async(req, res) => {
 
 router.get('/new', async(req, res) => {
 
-    res.render('new-post', { layout: 'dashboard' });
+    res.render('new-post', { layout: 'Dashboard' });
 
 });
 
