@@ -9,7 +9,7 @@
             </div>
              <input type="hidden" name="post-id" value="{{post._id}}" />
             <a href="/post/{{post._id}}"><h6 class="text-xl font-semibold">{{post.title}}   <span class="text-gray-600 ml-3"> Posted by  {{post.createdBy.username}}  on  {{format_Date post.dateCreated}}</span></h6></a>
-            <p class="mt-2 mb-4 text-gray-600 p-5">
+            <p class="mt-2 mb-4 text-gray-600 p-5 lg:p-16">
                 {{post.body}} </p>
         </div>
         </div>
